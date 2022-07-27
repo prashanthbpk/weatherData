@@ -37,13 +37,15 @@
 				<workers>1</workers>
 				<workerType>Micro</workerType>
 				<objectStoreV2>true</objectStoreV2>
-				<applicationName>papa-babu</applicationName>
+				<applicationName>prashanth</applicationName>
 				<muleVersion>4.4.0</muleVersion>				
 				</cloudHubDeployment>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
+
+
 
 	<dependencies>
 		<dependency>
