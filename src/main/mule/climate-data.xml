@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="35abd558-e7b7-4bb1-9d03-ef788587804e" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="climate-dataFlow" doc:id="25c0ed36-0e30-4305-b140-8fd0b0774d2e" >
+		<http:listener doc:name="Listener" doc:id="323df75f-ac82-4bcd-b5a2-be78ba5c38ad" config-ref="HTTP_Listener_config" path="/weather"/>
+		<http:request method="GET" doc:name="Request" doc:id="a69b4a30-13e1-4625-a1fc-ef96a6e4cbda" url="http://worldtimeapi.org/api/timezone/America/Argentina/Salta"/>
+	</flow>
+</mule>
